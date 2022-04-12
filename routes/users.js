@@ -6,12 +6,13 @@ const Users = require('../models/Users')
 
 router.post('/auth/register', async (req, res) => {
     // req.body
-    const {nome,email,senha,contato,habilidades} = req.body
+    const {nome,email,senha,contato,mentor,habilidades} = req.body
     const users = {
         nome,
         email,
         senha,   
         contato,
+        mentor,
         habilidades,
         data: new Date(),
     }
