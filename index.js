@@ -4,7 +4,7 @@ const cors = require('cors')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const users = require('./routes/users')
-const Mentorias = require('./routes/mentorias')
+const Mentorias = require('./routes/Mentorias')
 
 
 
@@ -37,4 +37,4 @@ mongoose.connect(url,
     console.log('connectamos ao mongoDB')
 })
 .catch((err) => console.log(err))
-app.listen(process.env.PORT || 8080, () => `servidor iniciado`)
+app.listen( process.env.PORT || 8080, () => `servidor iniciado`)
